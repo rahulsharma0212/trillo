@@ -189,6 +189,10 @@ body {
       .side-nav__link:link, .side-nav__link:visited {
         flex-direction: column;
         padding: 1.5rem 0.5rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 1.5rem 0rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
@@ -212,6 +216,9 @@ body {
 
 .gallery {
   display: flex; }
+  @media only screen and (max-width: 31.25em) {
+    .gallery {
+      flex-direction: column; } }
   .gallery__photo {
     width: 100%;
     display: block; }
@@ -220,6 +227,9 @@ body {
   display: flex;
   align-items: center;
   border-bottom: var(--line); }
+  @media only screen and (max-width: 31.25em) {
+    .overview {
+      flex-wrap: wrap; } }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -230,9 +240,16 @@ body {
       .overview__heading {
         font-size: 1.8rem;
         padding: 1.25rem 2rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .overview__heading {
+        flex: 0 0 65%; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__stars {
+        order: 1;
+        padding: 1.25rem 2rem 2rem; } }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
@@ -241,6 +258,10 @@ body {
     font-size: 1.2rem;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__location {
+        order: 1;
+        padding: 1.25rem 2rem 2rem; } }
   .overview__icon-location {
     margin-right: 0.5rem; }
   .overview__rating {
@@ -257,6 +278,10 @@ body {
       .overview__rating {
         padding: 0 1.5rem;
         margin-left: 2.25rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .overview__rating {
+        flex: 0 0 35%;
+        margin: 0; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
@@ -317,17 +342,25 @@ body {
   .list__item {
     flex: 0 0 50%;
     margin-bottom: 0.7rem; }
+    @media only screen and (max-width: 31.25em) {
+      .list__item {
+        flex: 0 0 100%; } }
   .list__item::before {
     content: "";
     display: inline-block;
     height: 1rem;
     width: 1rem;
     margin-right: 0.7rem;
-    background-color: var(--color-primary);
-    -webkit-mask-image: url(../img/chevron-thin-right.svg);
-    -webkit-mask-size: cover;
-    mask-image: url(../img/chevron-thin-right.svg);
-    mask-size: cover; }
+    background-image: url(../img/chevron-small-right.svg);
+    background-size: cover; }
+    @supports (-webkit-mask-image: url(../img/chevron-thin-right.svg)) or (mask-image: url(../img/chevron-thin-right.svg)) {
+      .list__item::before {
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+        background-image: none; } }
 
 .recommend {
   font-size: 1.3rem;
