@@ -212,11 +212,14 @@
 .legal {
   font-size: 1.2rem;
   color: var(--color-Grey-light-4);
+  background-color: var(--color-Grey-dark-1);
   text-align: center;
   padding: 2.5rem;
 
-  @media only screen and (max-width: $bp-medium) {
-    display: none;
+  &--sidebar {
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
   }
 }
 
@@ -580,5 +583,14 @@
   &:focus {
     outline: none;
     animation: pulsate 1s infinite;
+  }
+}
+
+/////////////////////
+/// FOOTER
+.footer {
+  display: none;
+  @media only screen and (max-width: $bp-medium) {
+    display: block;
   }
 }

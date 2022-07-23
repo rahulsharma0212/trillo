@@ -14,6 +14,13 @@
     <title>trillo &mdash; Your all-in-one booking app</title>
   </head>
   <body>
+    <div class="preloader js-preloader">
+      <div class="preloader__content js-content">
+        <img src="img/logo.png" alt="trillo logo " class="preloader__logo" />
+        <h1 class="preloader__heading">Welcome to trillo</h1>
+        <p class="preloader__text">Start your new adventure...</p>
+      </div>
+    </div>
     <div class="container">
       <header class="header">
         <img src="img/logo.png" alt="trillo logo" class="logo" />
@@ -86,7 +93,9 @@
             </li>
           </ul>
 
-          <div class="legal">&copy; 2022 by trillo. All right reserved.</div>
+          <div class="legal legal--sidebar">
+            &copy; 2022 by trillo. All right reserved.
+          </div>
         </nav>
         <main class="hotel-view">
           <div class="gallery">
@@ -246,7 +255,15 @@
             </button>
           </div>
         </main>
+        <footer class="footer">
+          <div class="legal legal--footer">
+            &copy; 2022 by trillo. All right reserved.
+          </div>
+        </footer>
       </div>
     </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/script.js"></script>
   </body>
 </html>
